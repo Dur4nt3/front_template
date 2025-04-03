@@ -24,7 +24,14 @@ Included in the repository:
 
 - An "index.html" file (under "./src")
 
-- A "styles.css" file (under "./src")
+- A "styles.css" file (under "./src") with a pre-defined font-stack
+
+- A CSS reset under "./src/assets/stylesheets"
+
+- A "fonts.css" file under "./src/assets/stylesheets"
 
 - ESLint with a configuration inspired by AirBnB's style guide (@stylistic is commented-out due to conflicts with Prettier)
 
+- Prettier configured to not conflict with ESLint
+
+- A ".prettierignore" file to ensure to ignore various files that shouldn't be formatted

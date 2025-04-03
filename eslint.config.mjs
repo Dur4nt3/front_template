@@ -2,6 +2,7 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
+import eslintConfigPrettier from "eslint-config-prettier/flat"
 
 // Rules that shouldn't apply to the configuration file:
 /* eslint quotes: 0 */
@@ -13,11 +14,12 @@ export default defineConfig([
 
     // Webpack configuration files are exempt
     "webpack.**.**",
-    
+
   ]),
   { files: ["**/*.{js,mjs,cjs}"] },
   { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
   { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"] },
+  eslintConfigPrettier,
   {
     plugins: { "@stylistic": stylistic },
 
