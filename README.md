@@ -25,3 +25,6 @@ Included in the repository:
 - An "index.html" file (under "./src")
 
 - A "styles.css" file (under "./src")
+
+- ESLint with a configuration inspired by AirBnB's style guide (@stylistic is commented-out due to conflicts with Prettier)
+
