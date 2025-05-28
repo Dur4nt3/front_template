@@ -36,8 +36,8 @@ export default defineConfig([
       // "@stylistic/implicit-arrow-linebreak": ["warn", "beside"],
       // "@stylistic/object-curly-newline": ["warn", { "multiline": true }],
 
-      // Long strings are exempt from this rule, and shouldn't be broken up
-      "@stylistic/max-len": ["warn", { "code": 80 }],
+      // Long strings (including comments) are exempt from this rule, and shouldn't be broken up
+      "@stylistic/max-len": ["warn", { "code": 80, "ignoreComments": true, "ignoreStrings": true, }],
 
       "@stylistic/no-mixed-operators": "warn",
       // "@stylistic/nonblock-statement-body-position": ["warn", "beside"],
@@ -123,8 +123,8 @@ export default defineConfig([
       "no-new-wrappers": "error",
       "radix": "error",
 
-      // Exceptions: "e" for event listeners, "a" and "b" for sorting arrays
-      "id-length": ["error", { "exceptions": ["e", "a", "b"] }],
+      // Exceptions: "e" for event listeners, "a" and "b" for sorting arrays, "i" and "j" for iterators
+      "id-length": ["error", { "exceptions": ["e", "a", "b", "i", "j"] }],
 
       // Includes options you might want to add
       "new-cap": "error",
