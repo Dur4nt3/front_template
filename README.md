@@ -26,6 +26,9 @@ The aim of this template is to allow you to quick start your front-end project w
 
 [![Prettier](https://img.shields.io/badge/prettier-%23F7B93E.svg?style=for-the-badge&logo=prettier&logoColor=black)](https://prettier.io/)
 
+[![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+
+[![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)](https://babeljs.io/)
 
 ### Template Information
 
@@ -58,6 +61,10 @@ The aim of this template is to allow you to quick start your front-end project w
 - Prettier configured to not conflict with ESLint
 
 - A ".prettierignore" file to ensure to ignore various files that shouldn't be formatted
+
+- Jest for testing
+
+- Babel to be able to use Jest with ES6 modules
 
 ## Usage
 
