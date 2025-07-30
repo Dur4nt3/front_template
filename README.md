@@ -32,6 +32,10 @@ The aim of this template is to allow you to quick start your front-end project w
 
 [![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)](https://babeljs.io/)
 
+[![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
+
+[![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
+
 ### Template Information
 
 **The following are included in the template:**
@@ -67,6 +71,8 @@ The aim of this template is to allow you to quick start your front-end project w
 - Jest for testing
 
 - Babel to be able to use Jest with ES6 modules
+
+- Vite as a build tool for react
 
 ## Usage
 

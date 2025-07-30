@@ -2,7 +2,9 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
-import eslintConfigPrettier from "eslint-config-prettier/flat"
+import eslintConfigPrettier from "eslint-config-prettier/flat";
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
 // Rules that shouldn't apply to the configuration file:
 /* eslint quotes: 0 */
@@ -16,9 +18,20 @@ export default defineConfig([
     "webpack.**.**",
 
   ]),
-  { files: ["**/*.{js,mjs,cjs}"] },
-  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
-  { files: ["**/*.{js,mjs,cjs}"], plugins: { js }, extends: ["js/recommended"] },
+  { files: ["**/*.{js,mjs,cjs,jsx}"],
+    extends: [
+      "js/recommended",
+      js.configs.recommended,
+      reactHooks.configs['recommended-latest'],
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: { 
+      ecmaVersion: 2020,
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: { ecmaVersion: 'latest', ecmaFeatures: { jsx: true } ,sourceType: 'module'},
+    },
+    plugins: { js }
+  },
   eslintConfigPrettier,
   {
     plugins: { "@stylistic": stylistic },
@@ -33,6 +46,7 @@ export default defineConfig([
       "@stylistic/spaced-comment": ["warn", "always"],
 
       "prefer-const": "warn",
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
 
       "no-var": "error",
       "no-object-constructor": "error",

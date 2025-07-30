@@ -2,9 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: "./src/main.jsx",
     output: {
-        filename: "index.js",
+        filename: "bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
@@ -32,5 +32,8 @@ module.exports = {
                 type: 'asset/resource',
             },
         ],
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
     },
 };
