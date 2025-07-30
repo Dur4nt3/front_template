@@ -72,7 +72,9 @@ The aim of this template is to allow you to quick start your front-end project w
 
 - Babel to be able to use Jest with ES6 modules
 
-- Vite as a build tool for react
+- Babel with the React preset
+
+- Vite as a build tool for React
 
 ## Usage
 
