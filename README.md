@@ -8,6 +8,8 @@ The aim of this template is to allow you to quick start your front-end project w
 
 *Note: various configurations are opinionated and/or project-specific and may or may not need to be edited to fit your specific needs.*
 
+**Packages are periodically updated to the LATEST version.**
+
 ### Technologies
 
 **This template uses the following technologies:**

@@ -32,8 +32,6 @@ export default defineConfig([
       "@stylistic/no-mixed-operators": "warn",
       "@stylistic/spaced-comment": ["warn", "always"],
 
-
-      // Might be obtrusive => change to "off" if it is
       "prefer-const": "warn",
 
       "no-var": "error",
